@@ -3,6 +3,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#data
+./data
+./vectordb
+./models
+
 # C extensions
 *.so
 
@@ -25,6 +30,11 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+*.npy
+*.pyc
+*.jsonl
+.ipynb_checkpoints/
+.venv/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template

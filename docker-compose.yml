@@ -1,0 +1,16 @@
+﻿version: "3.9"
+
+services:
+  semantic-search:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./vectordb:/app/vectordb
+      - ./models:/app/models
+    environment:
+      - DEVICE=cpu
+      - CACHE_SIMILARITY_THRESHOLD=0.85
+      - EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
+    restart: unless-stopped
